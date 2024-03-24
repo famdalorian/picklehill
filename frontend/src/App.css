@@ -1,38 +1,70 @@
+/* App.css */
+
+/* Global styles */
+body {
+
+  background-color: #141b33; /* Dark navy background */
+  color: white; /* Gold text color */
+  font-family: 'Dancing Script'; /* Corrected font family declaration */
+  text-shadow: 1px 1px 1px #17151c;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  min-height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Parallax component */
+.Parallax {
+  position: relative;
+  overflow: hidden;
+  height: 600px; /* Adjust as needed */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.parallax-content h1 {
+  font-size: auto;
+  margin-bottom: 20px;
+  text-shadow: gold 1px 1px 1px;
+}
+
+.parallax-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.parallax-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .Parallax {
+    height: 300px; /* Adjust height for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .parallax-content h1,
+  .parallax-content h2 {
+    font-size: 1.5rem; /* Adjust heading font size for smaller screens */
+  }
+
+  .parallax-content p {
+    font-size: 0.9rem; /* Adjust paragraph font size for smaller screens */
   }
 }
