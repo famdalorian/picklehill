@@ -1,74 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-import ParallaxComponent from "./Components/Parallax";
 import cake1 from "../src/Assets/cake1.jpeg";
 import cake2 from "../src/Assets/cake2.jpeg";
+import Sidebar from "./Components/SideBar";
+import Home from "./Pages/Home";
+import Specialties from "./Components/Specialties";
+
+// Assuming you have a logo image named "logo.png" in the Assets folder
+import logo from "../src/Assets/Logo.PNG";
 
 function App() {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="Parallax">
-          <ParallaxComponent offsetY={100}>
-            <div className="parallax-content">
-              <h1>Welcome to PickleHill Ltd</h1>
-              <p>
-                We specialize in crafting exquisite cakes for all occasions.
-              </p>
-              <p>
-                From elegant wedding cakes to whimsical birthday creations, we
-                create confectionery masterpieces that delight both the eyes and
-                the taste buds.
-              </p>
-              <p>
-                Explore our gallery to discover our portfolio of delectable
-                creations, and contact us to discuss how we can make your
-                special event even sweeter.
-              </p>
+    <Router>
+      <div className="App">
+        <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
+        <div className="content-container">
+          <div className="header">
+            <button className="toggle-button" onClick={toggleSidebar}>
+              <img src={logo} alt="Logo" className="logo" />
+            </button>
+          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/specialties" element={<Specialties />} />
+          </Routes>
+          <div className="section">
+            <div className="content">
+              <img src={cake1} alt="Cake 1" className="cake-image" />
             </div>
-          </ParallaxComponent>
-        </div>
-
-        <div className="Parallax">
-          <ParallaxComponent>
-            <div className="parallax-content">
-              {/* Use the imported image directly */}
-              <img src={cake1} alt="Cake 1" className="parallax-image" />
+          </div>
+          <div className="section">
+            <div className="content">
+              <img src={cake2} alt="Cake 2" className="cake-image" />
             </div>
-          </ParallaxComponent>
+          </div>
         </div>
-
-        <div className="Parallax">
-          <ParallaxComponent offsetY={-50}>
-            <div className="parallax-content">
-              <h2>Our Specialties</h2>
-              <p>
-                Indulge in our delicious cakes, made with the finest ingredients
-                and attention to detail.
-              </p>
-              <p>
-                From classic flavors like chocolate and vanilla to unique
-                creations like red velvet and matcha, we offer something to
-                satisfy every palate.
-              </p>
-              <p>
-                Each cake is meticulously decorated to suit your event, ensuring
-                a stunning centerpiece that tastes as good as it looks.
-              </p>
-            </div>
-          </ParallaxComponent>
-        </div>
-
-        <div className="Parallax">
-          <ParallaxComponent>
-            <div className="parallax-content">
-              {/* Use the imported image directly */}
-              <img src={cake2} alt="Cake 2" className="parallax-image" />
-            </div>
-          </ParallaxComponent>
-        </div>
-      </header>
-    </div>
+      </div>
+    </Router>
   );
 }
 

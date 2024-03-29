@@ -1,0 +1,32 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hide the sidebar */
+    width: 250px;
+    height: 100%;
+    background-color: #f0f0f0;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.open {
+    left: 0; /* Slide the sidebar in when opened */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px 20px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .sidebar a:hover {
+    background-color: #ddd;
+  }
+  

@@ -1,0 +1,26 @@
+/* SideMenu.css */
+
+.side-menu {
+    background-color: #0a1444; /* Slightly darker blue background */
+    width: 200px;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: -200px; /* Initially hide the menu */
+    transition: left 0.3s ease; /* Add transition effect for smooth animation */
+  }
+  
+  .side-menu.open {
+    left: 0; /* Slide the menu in when opened */
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-menu li {
+    padding: 10px 0;
+    border-top: 1px solid white; /* White pinstripe art deco style outlines */
+  }
+  

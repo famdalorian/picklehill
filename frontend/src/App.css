@@ -2,7 +2,6 @@
 
 /* Global styles */
 body {
-
   background-color: #141b33; /* Dark navy background */
   color: white; /* Gold text color */
   font-family: 'Dancing Script'; /* Corrected font family declaration */
@@ -11,60 +10,78 @@ body {
 
 .App {
   text-align: center;
-  min-height: 100vh; /* Ensure full viewport height */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 100vh;
 }
 
 .App-header {
   padding: 20px;
+  display: flex;
+  flex: 1;
 }
 
-/* Parallax component */
-.Parallax {
-  position: relative;
-  overflow: hidden;
-  height: 600px; /* Adjust as needed */
+.side-menu {
+  background-color: #0a1444; /* Slightly darker blue background */
+  width: 200px;
+  padding: 20px;
 }
 
-.parallax-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.side-menu ul {
+  list-style: none;
+  padding: 0;
 }
 
-.parallax-content h1 {
-  font-size: auto;
-  margin-bottom: 20px;
-  text-shadow: gold 1px 1px 1px;
+.side-menu li {
+  padding: 10px 0;
+  border-top: 1px solid white; /* White pinstripe art deco style outlines */
 }
 
-.parallax-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+.content-container {
+  flex: 3;
 }
 
-.parallax-image {
+/* Section styling */
+.section {
+  padding: 50px 0;
+}
+
+/* Content within sections */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Image styling */
+.cake-image {
   width: 100%;
+  max-width: 600px;
   height: auto;
   display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffffff;
 }
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-  .Parallax {
-    height: 300px; /* Adjust height for smaller screens */
+  .section {
+    padding: 30px 0;
   }
 
-  .parallax-content h1,
-  .parallax-content h2 {
-    font-size: 1.5rem; /* Adjust heading font size for smaller screens */
+  .cake-image {
+    max-width: 90%;
   }
+}
+.cakes-logo{
+  max-width: 33vh;
+}.toggle-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 
-  .parallax-content p {
-    font-size: 0.9rem; /* Adjust paragraph font size for smaller screens */
-  }
+.logo {
+  width: 250px; /* Adjust the width of the logo */
+  height: auto;
 }
