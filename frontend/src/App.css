@@ -9,15 +9,17 @@ body {
 }
 
 .App {
-  text-align: center;
   display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
 .App-header {
   padding: 20px;
   display: flex;
-  flex: 1;
+  justify-content: flex-end; /* Align header content to the right */
+  background-color: #141b33; /* Dark navy background */
+  border-bottom: 1px solid white; /* Add a horizontal pinstripe */
 }
 
 .side-menu {
@@ -43,6 +45,7 @@ body {
 /* Section styling */
 .section {
   padding: 50px 0;
+  border-bottom: 1px solid white; /* Add a horizontal pinstripe */
 }
 
 /* Content within sections */
@@ -71,17 +74,41 @@ body {
   .cake-image {
     max-width: 90%;
   }
+
+  .toggle-button {
+    display: block; /* Show the button on mobile devices */
+  }
+
+  .logo {
+    width: 150px; /* Adjust the width of the logo for mobile */
+  }
 }
-.cakes-logo{
-  max-width: 33vh;
-}.toggle-button {
+
+/* Hamburger button styles */
+.toggle-button {
   background: none;
   border: none;
-  padding: 0;
+  padding: 10px;
   cursor: pointer;
 }
 
 .logo {
   width: 250px; /* Adjust the width of the logo */
   height: auto;
+}
+/* App.css */
+
+/* Add these styles */
+.hamburger-container {
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  right: 20px; /* Position to the right side of the screen */
+}
+
+/* Hamburger button styles */
+.toggle-button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }

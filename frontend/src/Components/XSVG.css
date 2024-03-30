@@ -1,0 +1,8 @@
+.x-svg {
+    transition: opacity 1.3s ease-in-out; /* Add transition for opacity */
+  }
+  
+  .x-svg.hidden {
+    opacity: 0; /* Set opacity to 0 when hidden */
+  }
+  
