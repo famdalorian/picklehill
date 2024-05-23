@@ -1,10 +1,8 @@
-/* App.css */
-
 /* Global styles */
 body {
   background-color: #141b33; /* Dark navy background */
   color: white; /* Gold text color */
-  font-family: 'Dancing Script'; /* Corrected font family declaration */
+  font-family: "Dancing Script";
   text-shadow: 1px 1px 1px #17151c;
   margin: 0;
   padding: 0;
@@ -13,7 +11,7 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .App-header {
@@ -42,22 +40,21 @@ body {
 }
 
 .content-container {
-  flex: 3;
+  flex: 1; /* Allow this to grow and take up the remaining space */
+  padding: 40px 20px; /* Match padding from contact styles */
+  text-align: center; /* Center text alignment */
 }
 
-/* Section styling */
 .section {
   padding: 50px 0;
   border-bottom: 1px solid white; /* Add a horizontal pinstripe */
 }
 
-/* Content within sections */
 .content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Image styling */
 .cake-image {
   width: 100%;
   max-width: 600px;
@@ -142,4 +139,211 @@ body {
 .logo {
   width: 250px; /* Adjust the width of the logo */
   height: auto;
+}
+
+/* Gallery styles */
+.gallery-container {
+  padding: 40px 20px; /* Match padding from contact styles */
+  text-align: center; /* Center text alignment */
+}
+
+.gallery-title {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-grid img,
+.carousel-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffffff;
+  transition: transform 0.3s, z-index 0.3s;
+}
+
+.gallery-grid img:hover,
+.carousel-image:hover {
+  transform: scale(2);
+  z-index: 10;
+}
+
+.floating-image {
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.2s ease, z-index 0s ease 0.2s;
+}
+
+/* Keyframes for floating effect */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-button {
+  background-color: #0a1444; /* Dark blue background */
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+  background-color: #141b33; /* Slightly lighter blue on hover */
+}
+
+.prev-button {
+  position: absolute;
+  left: 10px;
+}
+
+.next-button {
+  position: absolute;
+  right: 10px;
+}
+
+.carousel-image-container {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+  }
+
+  .carousel-button {
+    font-size: 1.5em;
+    padding: 8px;
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+  .carousel-button {
+    font-size: 1.2em;
+    padding: 5px;
+  }
+
+  .prev-button {
+    left: 5px;
+  }
+
+  .next-button {
+    right: 5px;
+  }
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #0a1444;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  transition: transform 0.5s;
+}
+
+.footer-hidden {
+  transform: translateY(100%);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #ffcc00; /* Gold color on hover */
+}
+
+/* Contact styles */
+.contact-container {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #141b33; /* Dark navy background */
+  color: white; /* Gold text color */
+  font-family: "Dancing Script";
+  text-shadow: 1px 1px 1px #17151c;
+}
+
+.contact-title {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3em;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-icon span {
+  margin-top: 10px;
+  font-size: 0.5em;
+  color: #ffcc00; /* Gold color */
+}
+
+.contact-icon:hover {
+  color: #ffcc00; /* Gold color on hover */
+}
+
+.contact-icon svg {
+  font-size: 1.5em; /* Large icon size */
 }

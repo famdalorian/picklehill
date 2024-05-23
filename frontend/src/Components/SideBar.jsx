@@ -4,15 +4,29 @@ import "./Sidebar.css";
 
 const Sidebar = ({ isOpen, onClose }) => {
   return (
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+    <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <ul>
         <li>
-          <Link to="/" onClick={onClose}>Home</Link>
+          <Link to="/" onClick={onClose}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/specialties" onClick={onClose}>Our Specialties</Link>
+          <Link to="/Gallery" onClick={onClose}>
+            Gallery
+          </Link>
         </li>
-      </ul>
+        <li>
+          <Link to="/specialties" onClick={onClose}>
+            Our Specialties
+          </Link>
+        </li>
+        <li>
+          <Link to="/Contact" onClick={onClose}>
+            Contact
+          </Link>
+        </li>{" "}
+      </ul>{" "}
     </div>
   );
 };

@@ -9,7 +9,9 @@ import Sidebar from "./Components/SideBar";
 import Home from "./Pages/Home";
 import Specialties from "./Components/Specialties";
 import HamburgerIcon from "./Components/HamburgerIcon"; // Import the HamburgerIcon component
-
+import Gallery from "./Pages/Gallery";
+import Footer from "./Components/Footer";
+import Contact from "./Pages/Contact";
 // Assuming you have a logo image named "logo.png" in the Assets folder
 import logo from "../src/Assets/Logo.PNG";
 
@@ -35,6 +37,8 @@ function App() {
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/specialties" element={<Specialties />} />
+    <Route path="/Gallery" element={<Gallery />} />
+    <Route path="/Contact" element={<Contact />} />
   </Routes>
 </div>
           <div className="section">
@@ -49,6 +53,8 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer/>
+
     </Router>
   );
 }
