@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="contact-icons">
         <a href="tel:+1234567890" aria-label="Phone" className="contact-icon">
           <FaPhone />
-          <span>+123 456 7890</span>
+          <span>+44 7964543278</span>
         </a>
         <a href="mailto:info@picklehill.com" aria-label="Email" className="contact-icon">
           <FaEnvelope />
