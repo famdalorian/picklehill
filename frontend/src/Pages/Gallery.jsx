@@ -99,6 +99,17 @@ function Gallery() {
           </div>
         ))}
       </div>
+      
+      <div className="video-container">
+        <iframe 
+          title="vimeo-player" 
+          src="https://player.vimeo.com/video/988106334?h=9544e92f38" 
+          width="640" 
+          height="360" 
+          frameBorder="0" 
+          allowFullScreen
+        ></iframe>
+      </div>
     </div>
   );
 }
