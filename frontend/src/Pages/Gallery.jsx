@@ -2,7 +2,42 @@ import React, { useEffect } from 'react';
 import '../App.css';
 import ImageCarousel from '../Components/ImageCarousel';
 
-const images = new Array(33).fill('https://via.placeholder.com/800x400');
+// Manually create an array of image paths
+const imagePaths = [
+  require('../Assets/gallery/cake1.jpg'),
+  require('../Assets/gallery/cake2.jpg'),
+  require('../Assets/gallery/cake3.jpg'),
+  require('../Assets/gallery/cake4.jpg'),
+  require('../Assets/gallery/cake5.jpg'),
+  require('../Assets/gallery/cake6.jpg'),
+  require('../Assets/gallery/cake7.jpg'),
+  require('../Assets/gallery/cake8.jpg'),
+  require('../Assets/gallery/cake9.jpg'),
+  require('../Assets/gallery/cake10.jpg'),
+  require('../Assets/gallery/cake11.jpg'),
+  require('../Assets/gallery/cake12.jpg'),
+  require('../Assets/gallery/cake13.jpg'),
+  require('../Assets/gallery/cake14.jpg'),
+  require('../Assets/gallery/cake15.jpg'),
+  require('../Assets/gallery/cake16.jpg'),
+  require('../Assets/gallery/cake17.jpg'),
+  require('../Assets/gallery/cake18.jpg'),
+  require('../Assets/gallery/cake19.jpg'),
+  require('../Assets/gallery/cake20.jpg'),
+  require('../Assets/gallery/cake21.jpg'),
+  require('../Assets/gallery/cake22.jpg'),
+  require('../Assets/gallery/cake23.jpg'),
+  require('../Assets/gallery/cake24.jpg'),
+  require('../Assets/gallery/cake25.jpg'),
+  require('../Assets/gallery/cake26.jpg'),
+  require('../Assets/gallery/cake27.jpg'),
+  require('../Assets/gallery/cake28.jpg'),
+  require('../Assets/gallery/cake29.jpg'),
+  require('../Assets/gallery/cake30.jpg'),
+  require('../Assets/gallery/cake31.jpg'),
+  require('../Assets/gallery/cake32.jpg'),
+  require('../Assets/gallery/cake33.jpg')
+];
 
 function Gallery() {
   useEffect(() => {
@@ -56,9 +91,9 @@ function Gallery() {
   return (
     <div className="gallery-container">
       <h2 className="gallery-title">Gallery</h2>
-      <ImageCarousel images={images.slice(0, 3)} />
+      <ImageCarousel images={imagePaths.slice(0, 33)} />
       <div className="gallery-grid">
-        {images.map((image, index) => (
+        {imagePaths.map((image, index) => (
           <div key={index} className="gallery-item">
             <img src={image} alt={`Grid ${index}`} className="floating-image" />
           </div>
