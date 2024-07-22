@@ -11,11 +11,11 @@ const Contact = () => {
           <FaPhone />
           <span>+44 7964543278</span>
         </a>
-        <a href="mailto:info@picklehill.com" aria-label="Email" className="contact-icon">
+        <a href="mailto:contact@picklehill.com" aria-label="Email" className="contact-icon">
           <FaEnvelope />
-          <span>info@picklehill.com</span>
+          <span>contact@picklehill.com</span>
         </a>
-        <a href="https://instagram.com/picklehill" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="contact-icon">
+        <a href="https://instagram.com/pickle.hill.ltd" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="contact-icon">
           <FaInstagram />
           <span>@picklehill</span>
         </a>

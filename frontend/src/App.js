@@ -12,7 +12,6 @@ import HamburgerIcon from "./Components/HamburgerIcon"; // Import the HamburgerI
 import Gallery from "./Pages/Gallery";
 import Footer from "./Components/Footer";
 import Contact from "./Pages/Contact";
-// Assuming you have a logo image named "logo.png" in the Assets folder
 import logo from "../src/Assets/Logo.PNG";
 
 function App() {
@@ -28,8 +27,8 @@ function App() {
         <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
         <div className="content-container">
           <div className="header">
-            <div className="hamburger-container"> {/* Add this container for hamburger icon */}
-              <HamburgerIcon onClick={toggleSidebar} isOpen={isSidebarOpen} /> {/* Use the HamburgerIcon component */}
+            <div className="hamburger-container">
+              <HamburgerIcon onClick={toggleSidebar} isOpen={isSidebarOpen} /> 
             </div>
             <img src={logo} alt="Logo" className="logo" />
           </div>
@@ -41,17 +40,10 @@ function App() {
     <Route path="/Contact" element={<Contact />} />
   </Routes>
 </div>
-          <div className="section">
-            <div className="content">
-              <img src={cake1} alt="Cake 1" className="cake-image" />
-            </div>
-          </div>
-          <div className="section">
-            <div className="content">
-              <img src={cake2} alt="Cake 2" className="cake-image" />
-            </div>
-          </div>
+         
+          
         </div>
+        <div/>
       </div>
       <Footer/>
 

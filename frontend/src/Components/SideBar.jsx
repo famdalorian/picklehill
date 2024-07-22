@@ -17,8 +17,8 @@ const Sidebar = ({ isOpen, onClose }) => {
           </Link>
         </li>
         <li>
-          <Link to="/specialties" onClick={onClose}>
-            Our Specialties
+          <Link to="/specialities" onClick={onClose}>
+            Our Specialities
           </Link>
         </li>
         <li>
