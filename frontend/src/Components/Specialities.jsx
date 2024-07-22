@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-class Specialties extends Component {
+class Specialities extends Component {
   render() {
     return (
       <div className="content">
-        <h2>Our Specialties</h2>
+        <h2>Our Specialities</h2>
         <p>
           Indulge in our delicious cakes, made with the finest ingredients and
           attention to detail.
@@ -23,4 +23,4 @@ class Specialties extends Component {
   }
 }
 
-export default Specialties;
+export default Specialities;

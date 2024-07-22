@@ -1,14 +1,13 @@
 // App.jsx
 
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,  } from "react-router-dom";
 import "./App.css";
-import cake1 from "../src/Assets/cake1.jpeg";
-import cake2 from "../src/Assets/cake2.jpeg";
+
 import Sidebar from "./Components/SideBar";
 import Home from "./Pages/Home";
-import Specialties from "./Components/Specialties";
-import HamburgerIcon from "./Components/HamburgerIcon"; // Import the HamburgerIcon component
+import Specialities from "./Components/Specialities";
+import HamburgerIcon from "./Components/HamburgerIcon"; 
 import Gallery from "./Pages/Gallery";
 import Footer from "./Components/Footer";
 import Contact from "./Pages/Contact";
@@ -35,7 +34,7 @@ function App() {
           <div className="content-container">
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/specialties" element={<Specialties />} />
+    <Route path="/specialities" element={<Specialities />} />
     <Route path="/Gallery" element={<Gallery />} />
     <Route path="/Contact" element={<Contact />} />
   </Routes>
